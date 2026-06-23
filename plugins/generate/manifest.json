@@ -1,0 +1,13 @@
+{
+  "owner": "local",
+  "name": "generate",
+  "type": "plugin",
+  "runner": "node",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "icon": "thumbnail.png",
+  "license": "MIT",
+  "description": "Text-to-image generation. Supports local Stable Diffusion, Replicate, and OpenAI/DALL-E. Configure provider, base URL, and API key in plugin settings.",
+  "categories": ["tools"],
+  "priority": "high"
+}

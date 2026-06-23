@@ -1,0 +1,13 @@
+{
+  "owner": "local",
+  "name": "edit",
+  "type": "plugin",
+  "runner": "node",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "icon": "thumbnail.png",
+  "license": "MIT",
+  "description": "Image editing tools: resize, crop, convert format, and apply filters. Supports PNG, JPEG, WebP, AVIF, TIFF, and BMP.",
+  "categories": ["tools"],
+  "priority": "high"
+}

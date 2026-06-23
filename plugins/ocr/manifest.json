@@ -1,0 +1,13 @@
+{
+  "owner": "local",
+  "name": "ocr",
+  "type": "plugin",
+  "runner": "node",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "icon": "thumbnail.png",
+  "license": "MIT",
+  "description": "Extract text from images using OCR (Tesseract.js). Supports multiple languages and image formats.",
+  "categories": ["tools"],
+  "priority": "high"
+}

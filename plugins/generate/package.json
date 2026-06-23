@@ -1,0 +1,22 @@
+{
+  "name": "generate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LM Studio plugin — text-to-image generation (SD, Replicate, DALL-E)",
+  "author": "LAIM69420",
+  "license": "MIT",
+  "scripts": {
+    "dev": "lms dev",
+    "install": "lms dev --install --yes",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@lmstudio/sdk": "^1.5.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^22.0.0"
+  }
+}

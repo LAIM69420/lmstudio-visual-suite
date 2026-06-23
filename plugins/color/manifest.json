@@ -1,0 +1,12 @@
+{
+  "owner": "local",
+  "name": "lmstudio-color",
+  "type": "plugin",
+  "runner": "node",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "icon": "thumbnail.png",
+  "license": "MIT",
+  "description": "Color tools for LM Studio — convert between hex/RGB/HSL/HWB, generate palettes, check WCAG contrast ratios.",
+  "categories": ["tools"]
+}

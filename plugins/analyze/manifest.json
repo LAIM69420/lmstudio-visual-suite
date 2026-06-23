@@ -1,0 +1,13 @@
+{
+  "owner": "local",
+  "name": "analyze",
+  "type": "plugin",
+  "runner": "node",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "icon": "thumbnail.png",
+  "license": "MIT",
+  "description": "Vision-based image analysis. Describe images, classify content, and ask visual questions using LM Studio's vision endpoint (default) or any OpenAI-compatible vision API.",
+  "categories": ["tools"],
+  "priority": "high"
+}

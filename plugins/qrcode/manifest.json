@@ -1,0 +1,12 @@
+{
+  "owner": "local",
+  "name": "lmstudio-qrcode",
+  "type": "plugin",
+  "runner": "node",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "icon": "thumbnail.png",
+  "license": "MIT",
+  "description": "QR code encoder and decoder for LM Studio. Generate QR codes as SVG, decode QR codes from image paths or URLs.",
+  "categories": ["tools"]
+}

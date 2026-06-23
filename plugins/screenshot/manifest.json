@@ -1,0 +1,12 @@
+{
+  "owner": "local",
+  "name": "lmstudio-screenshot",
+  "type": "plugin",
+  "runner": "node",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "icon": "thumbnail.png",
+  "license": "MIT",
+  "description": "Take screenshots in LM Studio. Capture full screen, active window, or region. Saves PNG files to a configurable output directory.",
+  "categories": ["tools"]
+}
