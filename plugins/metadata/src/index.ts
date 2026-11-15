@@ -45,7 +45,6 @@ export async function main(ctx: PluginContext) {
           // EXIF
           if (meta.exif) {
             try {
-              const exif = sharp.metadata(await sharp(imagePath).toBuffer()).exif;
               const tags = meta.exif;
               lines.push("", `   📷 EXIF data (${tags.length} bytes)`);
 
