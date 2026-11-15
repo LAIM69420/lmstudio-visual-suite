@@ -162,7 +162,11 @@ export const toolsProvider: ToolsProvider = async (ctl) => {
           const palette = generatePalette(baseHsl.h, baseHsl.s, baseHsl.l, paletteSize);
           return [
             `Palette based on ${rgbToHex(baseRgb.r, baseRgb.g, baseRgb.b)}:`,
-            ...palette.map((c, i) => `  ${i + 1}. ${c} — ${rgbToHsl(...Object.values(hexToRgb(c)!)).h}°`),
+            ...palette.map((c, i) => {
+              const cRgb = hexToRgb(c);
+              const hue = cRgb ? rgbToHsl(cRgb.r, cRgb.g, cRgb.b).h : 0;
+              return `  ${i + 1}. ${c} — ${hue}°`;
+            }),
           ].join("\n");
         }
 
