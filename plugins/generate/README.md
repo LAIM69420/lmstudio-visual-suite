@@ -31,7 +31,11 @@ Configured in LM Studio under Integrations → generate; field definitions live 
 
 ## Privileged surface
 
-Writes image files to `outputDir` (default `~/Pictures/generated`) and sends prompts to whichever provider is configured. With a cloud provider, prompts and API keys leave the machine; keys are stored in plugin config marked `isProtected`.
+Writes image files to `outputDir` (default `~/Pictures/generated`) and sends prompts to whichever provider is configured.
+
+`provider` defaults to `sd-webui`, so out of the box this plugin talks only to a local Stable Diffusion web UI on `127.0.0.1:7860` and nothing leaves the machine. `replicate` and `openai` send prompts off-box and require `apiKey`; keys are stored in plugin config marked `isProtected`.
+
+An unrecognised `provider` value returns an error. It does **not** fall back to a cloud provider — an earlier version did, which meant a typo could silently ship a prompt to OpenAI.
 
 ## Failure modes
 

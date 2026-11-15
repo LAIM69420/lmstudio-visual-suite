@@ -6,7 +6,7 @@ import * as path from "node:path";
 // ── Config ────────────────────────────────────────────────────────────────
 
 const configSchematics = createConfigSchematics()
-  .field("provider", "string", {}, "auto")
+  .field("provider", "string", {}, "sd-webui")
   .field("baseUrl", "string", {}, "http://localhost:7860")
   .field("apiKey", "string", { isProtected: true }, "")
   .field("defaultModel", "string", {}, "")
@@ -148,15 +148,10 @@ export async function main(ctx: PluginContext) {
             if (!apiKey) return "⚠️ OpenAI API key not configured. Set it in plugin settings.";
             buf = await generateOpenAI(prompt, { apiKey, model, size: `${width}x${height}` });
           } else {
-            // Try SD first, fallback to OpenAI
-            try {
-              buf = await generateSDWebUI(prompt, {
-                baseUrl, negative: negativePrompt, steps, cfg, width, height,
-              });
-            } catch {
-              if (!apiKey) throw new Error("No API key configured and SD WebUI not reachable");
-              buf = await generateOpenAI(prompt, { apiKey, model, size: `${width}x${height}` });
-            }
+            // Never fall back to a cloud provider implicitly: an unrecognised
+            // value used to fall through to OpenAI, which could send a prompt
+            // off-box when the user had only mistyped the provider name.
+            return `⚠️ Unknown provider "${effectiveProvider}". Use "sd-webui", "replicate", or "openai".`;
           }
         } catch (e: any) {
           return `❌ Generation failed: ${e.message || e}`;

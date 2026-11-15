@@ -1,8 +1,8 @@
 {
   "name": "generate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "description": "LM Studio plugin — text-to-image generation (SD, Replicate, DALL-E)",
+  "description": "LM Studio plugin \u2014 text-to-image generation (SD, Replicate, DALL-E)",
   "author": "LAIM69420",
   "license": "MIT",
   "scripts": {

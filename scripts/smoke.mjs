@@ -26,7 +26,8 @@ const pluginsDir = join(root, "plugins");
 const baselinePath = join(root, "scripts", "expected-tools.json");
 const update = process.argv.includes("--update");
 
-const TOOL_RE = /tool\(\s*\{\s*name:\s*"([a-zA-Z0-9_]+)"/g;
+// Plugins use both quote styles; accept either.
+const TOOL_RE = /tool\(\s*\{\s*name:\s*["']([a-zA-Z0-9_]+)["']/g;
 const SEMVER_RE = /^\d+\.\d+\.\d+$/;
 
 const failures = [];
