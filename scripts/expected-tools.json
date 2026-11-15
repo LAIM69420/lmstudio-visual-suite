@@ -1,0 +1,32 @@
+{
+  "analyze": [
+    "image_classify",
+    "image_describe"
+  ],
+  "color": [
+    "color_tool"
+  ],
+  "edit": [
+    "image_convert",
+    "image_crop",
+    "image_filter",
+    "image_resize"
+  ],
+  "generate": [
+    "image_generate"
+  ],
+  "metadata": [
+    "image_metadata"
+  ],
+  "ocr": [
+    "image_ocr"
+  ],
+  "qrcode": [
+    "qrcode_decode",
+    "qrcode_encode"
+  ],
+  "screenshot": [
+    "screenshot",
+    "screenshot_displays"
+  ]
+}

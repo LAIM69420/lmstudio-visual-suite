@@ -3,10 +3,12 @@
   "name": "lmstudio-color",
   "type": "plugin",
   "runner": "node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "icon": "thumbnail.png",
   "license": "MIT",
-  "description": "Color tools for LM Studio — convert between hex/RGB/HSL/HWB, generate palettes, check WCAG contrast ratios.",
-  "categories": ["tools"]
+  "description": "Color tools for LM Studio \u2014 convert between hex/RGB/HSL/HWB, generate palettes, check WCAG contrast ratios.",
+  "categories": [
+    "tools"
+  ]
 }

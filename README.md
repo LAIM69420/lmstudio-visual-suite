@@ -51,6 +51,15 @@ npm run build
 - Config via `createConfigSchematics`; secrets use `{ isProtected: true }`.
 - `withToolsProvider(async (ctl) => ...)` — use `ctl.getPluginConfig`, not `ctx.getPluginConfig`.
 
+## Verification
+
+```bash
+node scripts/smoke.mjs            # check every plugin
+node scripts/smoke.mjs --update   # rewrite the tool baseline after an intentional change
+```
+
+The harness validates each manifest, requires a substantive description, checks that declared icons exist, extracts every `tool({ name })` from source, and fails if the built output is stale or a tool appears, disappears, or is renamed relative to `scripts/expected-tools.json`.
+
 ## Status
 
 | Item | State |

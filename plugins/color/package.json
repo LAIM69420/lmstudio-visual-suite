@@ -1,8 +1,8 @@
 {
   "name": "lmstudio-color",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "description": "LM Studio plugin — color conversion and palette generation",
+  "description": "LM Studio plugin \u2014 color conversion and palette generation",
   "author": "LAIM69420",
   "license": "MIT",
   "scripts": {

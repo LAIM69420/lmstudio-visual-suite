@@ -1,8 +1,8 @@
 {
   "name": "metadata",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "description": "LM Studio plugin — image metadata extraction (EXIF, dimensions, format)",
+  "description": "LM Studio plugin \u2014 image metadata extraction (EXIF, dimensions, format)",
   "author": "LAIM69420",
   "license": "MIT",
   "scripts": {

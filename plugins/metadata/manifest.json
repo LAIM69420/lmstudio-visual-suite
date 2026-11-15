@@ -3,11 +3,13 @@
   "name": "metadata",
   "type": "plugin",
   "runner": "node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "icon": "thumbnail.png",
   "license": "MIT",
   "description": "Read image metadata: dimensions, format, file size, color space, alpha channel, EXIF data. Supports PNG, JPEG, WebP, AVIF, TIFF, BMP, GIF.",
-  "categories": ["tools"],
+  "categories": [
+    "tools"
+  ],
   "priority": "high"
 }
