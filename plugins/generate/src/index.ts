@@ -8,7 +8,7 @@ import * as path from "node:path";
 const configSchematics = createConfigSchematics()
   .field("provider", "string", {}, "auto")
   .field("baseUrl", "string", {}, "http://localhost:7860")
-  .field("apiKey", "string", { secret: true }, "")
+  .field("apiKey", "string", { isProtected: true }, "")
   .field("defaultModel", "string", {}, "")
   .field("outputDir", "string", {}, path.join(process.env.HOME || "/tmp", "Pictures", "generated"))
   .build();
@@ -111,8 +111,8 @@ async function saveImage(buf: Buffer, outputDir: string, prompt: string): Promis
 
 export async function main(ctx: PluginContext) {
   ctx.withConfigSchematics(configSchematics);
-  ctx.withToolsProvider(async () => {
-    const config = ctx.getPluginConfig(configSchematics);
+  ctx.withToolsProvider(async (ctl) => {
+    const config = ctl.getPluginConfig(configSchematics);
     const provider = config.get("provider");
     const baseUrl = config.get("baseUrl");
     const apiKey = config.get("apiKey");

@@ -7,7 +7,7 @@ import * as path from "node:path";
 
 const configSchematics = createConfigSchematics()
   .field("baseUrl", "string", {}, "http://localhost:1234")
-  .field("apiKey", "string", { secret: true }, "")
+  .field("apiKey", "string", { isProtected: true }, "")
   .field("model", "string", {}, "")
   .build();
 
@@ -61,8 +61,8 @@ async function callVisionAPI(opts: {
 
 export async function main(ctx: PluginContext) {
   ctx.withConfigSchematics(configSchematics);
-  ctx.withToolsProvider(async () => {
-    const config = ctx.getPluginConfig(configSchematics);
+  ctx.withToolsProvider(async (ctl) => {
+    const config = ctl.getPluginConfig(configSchematics);
     const baseUrl = config.get("baseUrl");
     const apiKey = config.get("apiKey");
     const model = config.get("model");
